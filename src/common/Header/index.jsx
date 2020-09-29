@@ -1,10 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { ReactComponent as Logo } from 'assets/icons/logo.svg';
-import { ReactComponent as Search } from 'assets/icons/searching.svg';
-import Cart from 'common/Header/Cart';
 
 import './Header.scss';
+import { ReactComponent as Logo } from 'assets/icons/logo.svg';
+import { ReactComponent as Search } from 'assets/icons/searching.svg';
+
+import Cart from 'common/Header/Cart';
 
 const Header = () => {
 	return (
@@ -14,9 +15,9 @@ const Header = () => {
 				<h1>Perseus</h1>
 			</NavLink>
 
-			<div className="search-input">
-				<Search className="search" />
-				<input type="text" placeholder="Search..." />
+			<div className="search">
+				<Search className="search-icon" />
+				<input className="search-input" type="text" placeholder="Search..." />
 			</div>
 
 			<div className="link-group">

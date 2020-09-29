@@ -10,6 +10,6 @@ const auth = createSlice({
 	},
 });
 
-const { reducers, actions } = auth;
+const { reducer, actions } = auth;
 export const { hasSignIn } = actions;
-export default reducers;
+export default reducer;

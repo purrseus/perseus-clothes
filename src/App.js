@@ -9,6 +9,9 @@ import {
 import { ReactComponent as Loading } from 'assets/icons/loading-page.svg';
 import Header from 'common/Header';
 
+// Lazy load
+const Categories = React.lazy(() => import('pages/Categories'));
+
 function App() {
 	return (
 		<div className="App">
@@ -18,7 +21,7 @@ function App() {
 
 					<Switch>
 						<Redirect exact path="/" to="/categories" />
-						{/* <Route exact path='/categories' component={} /> */}
+						<Route exact path="/categories" component={Categories} />
 					</Switch>
 				</Router>
 			</Suspense>

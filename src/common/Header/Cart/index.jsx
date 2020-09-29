@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+
+import './Cart.scss';
 import { ReactComponent as ArrowIcon } from 'assets/icons/arrow.svg';
 import { ReactComponent as CartIcon } from 'assets/icons/cart.svg';
-import './Cart.scss';
 
 const Cart = () => {
 	const [isHiddenCart, setIsHiddenCart] = useState(true);
@@ -13,7 +14,7 @@ const Cart = () => {
 				<CartIcon className="cart-icon" />
 				<span className="count">0</span>
 			</div>
-			{ !isHiddenCart && <ArrowIcon className="arrow" /> }
+			<ArrowIcon className="arrow" />
 			{!isHiddenCart && (
 				<div className="cart-dropdown">
 					<div className="content">
