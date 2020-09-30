@@ -21,16 +21,16 @@ const Header = () => {
 			</div>
 
 			<div className="link-group">
-				<NavLink className="link" to="/categories">
+				<NavLink className="link" activeClassName="active" to="/categories">
 					Categories
 				</NavLink>
-				<NavLink className="link" to="/shop">
+				<NavLink className="link" activeClassName="active" to="/shop">
 					Shop
 				</NavLink>
-				<NavLink className="link" to="/contacts">
+				<NavLink className="link" activeClassName="active" to="/contacts">
 					Contacts
 				</NavLink>
-				<NavLink className="link" to="/about">
+				<NavLink className="link" activeClassName="active" to="/about">
 					About
 				</NavLink>
 			</div>

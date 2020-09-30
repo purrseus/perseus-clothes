@@ -1,0 +1,46 @@
+.collection-preview {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.collection-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		margin-top: 40px;
+		width: 75%;
+
+		.collection-title {
+			font-size: 40px;
+			font-weight: 400;
+			text-transform: capitalize;
+			letter-spacing: 2px;
+		}
+
+		.see-all {
+			padding: 10px 40px;
+			border: 2px solid #555;
+			background-color: #fff;
+			font-size: 20px;
+			transition: 0.3s ease-in-out;
+
+			&:hover {
+				border: 2px solid #111;
+				background-color: #333;
+				color: white;
+			}
+		}
+	}
+
+	.products-preview {
+		height: 450px;
+		display: flex;
+	}
+}
+
+.jackets,
+.woman {
+	background-color: #eee;
+}

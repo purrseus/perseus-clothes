@@ -6,6 +6,7 @@ import { getCategories } from 'redux/reducers/categoriesSlice';
 
 import './Category.scss';
 import ViewButton from '../ViewButton';
+import { ReactComponent as LoadingComponent } from 'assets/icons/loading-component.svg';
 
 const Category = () => {
 	const dispatch = useDispatch();
@@ -25,18 +26,22 @@ const Category = () => {
 
 	return (
 		<div className="category-wrap">
-			{categoriesState.map((category, index) => (
-				<div
-					key={index}
-					className="category"
-					style={{
-						gridArea: category.name,
-						backgroundImage: `url(${category.image})`,
-					}}
-				>
-					<ViewButton category={category} />
-				</div>
-			))}
+			{!!categoriesState.length ? (
+				categoriesState.map((category, index) => (
+					<div
+						key={index}
+						className="category"
+						style={{
+							gridArea: category.name,
+							backgroundImage: `url(${category.image})`,
+						}}
+					>
+						<ViewButton content={category.name} />
+					</div>
+				))
+			) : (
+				<LoadingComponent className="loading-component" />
+			)}
 		</div>
 	);
 };

@@ -1,0 +1,21 @@
+.products {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	padding: 40px 0px;
+
+	h1 {
+		font-size: 40px;
+		font-weight: 400;
+		text-transform: capitalize;
+		letter-spacing: 2px;
+		margin: 20px 0px;
+	}
+
+	.list {
+		display: grid;
+		grid-template-columns: auto auto auto auto auto;
+	}
+}

@@ -1,10 +1,9 @@
 .header {
-	width: 100%;
-	padding: 0 20px;
+	max-width: 100%;
 	max-height: 60px;
 
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 
 	z-index: 1000;
@@ -32,16 +31,22 @@
 		padding: 0 5px;
 
 		.link {
-			padding: 20px 10px;
+			padding: 18px 10px;
 			margin: 0 20px;
 			font-size: 1.1rem;
+		}
+
+		.active {
+			padding-top: 20px;
+			border-bottom: 2px solid #555;
 		}
 	}
 
 	.search {
 		display: flex;
 		background-color: #eee;
-		padding: 5px 20px 5px 0px;
+		padding: 3px 20px 3px 0px;
+		width: 300px;
 		border-radius: 4px;
 
 		&-icon {
@@ -53,9 +58,10 @@
 		&-input {
 			margin: 0px 10px;
 			background-color: rgba(0, 0, 0, 0);
+			transition: width 1s ease-in-out;
 
 			&:focus {
-				border-bottom: 1px solid rgb(148, 148, 148);
+				border-bottom: 1px solid rgb(136, 136, 136);
 				margin-top: 1px;
 			}
 		}
@@ -63,8 +69,8 @@
 
 	.signin-signout {
 		display: block;
-		padding: 20px 10px;
-		margin: 0 20px;
+		padding: 20px 0px;
+		margin: 0 5px;
 		font-size: 1.1rem;
 	}
 }
