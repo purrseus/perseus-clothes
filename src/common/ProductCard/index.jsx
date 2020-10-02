@@ -2,17 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import './ProductCard.scss';
+import AddToCartBtn from './AddToCartBtn';
 
 const ProductCard = ({ product }) => {
 	return (
 		<div className="product-card">
 			<div
 				className="product-bg"
-				style={{ background: `url(${product.image})` }}
-			></div>
+				style={{ backgroundImage: `url(${product.image})` }}
+			>
+				<AddToCartBtn product={product} />
+			</div>
 			<div className="details">
 				<div className="product-name">{product.name}</div>
-				<div className="price">{`$${product.price}`}</div>
+				<span className="price">{`$${product.price}`}</span>
+				<span className="id"># {product.id}</span>
 			</div>
 		</div>
 	);

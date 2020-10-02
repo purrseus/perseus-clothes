@@ -1,21 +1,12 @@
 .products {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	width: 100%;
 	min-height: 100vh;
 	padding: 40px 0px;
 
-	h1 {
-		font-size: 40px;
-		font-weight: 400;
-		text-transform: capitalize;
-		letter-spacing: 2px;
-		margin: 20px 0px;
-	}
-
-	.list {
-		display: grid;
-		grid-template-columns: auto auto auto auto auto;
+	.loading-component {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 }

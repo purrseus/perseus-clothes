@@ -2,7 +2,6 @@
 	position: relative;
 	display: flex;
 	align-items: center;
-	cursor: pointer;
 
 	.cart {
 		position: relative;
@@ -13,11 +12,13 @@
 		&-icon {
 			width: 40px;
 			height: 60px;
+			cursor: pointer;
 		}
 
 		.count {
 			position: absolute;
 			top: 27px;
+			z-index: -10;
 
 			font-size: 12px;
 			font-weight: 300;

@@ -3,14 +3,14 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding: 80px 0px 40px;
 
 	.collection-header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 
-		margin-top: 40px;
-		width: 75%;
+		width: 80%;
 
 		.collection-title {
 			font-size: 40px;
@@ -35,7 +35,7 @@
 	}
 
 	.products-preview {
-		height: 450px;
+		height: 100%;
 		display: flex;
 	}
 }

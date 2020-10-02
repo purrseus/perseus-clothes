@@ -13,13 +13,15 @@ const CollectionPreview = ({ category }) => {
 		<div className={`collection-preview ${category.name}`}>
 			<div className="collection-header">
 				<h1 className="collection-title">{category.name}</h1>
-				<Link to={`/shop/${category.name}`} className="see-all">
+				<Link to={`/products/${category.name}`} className="see-all">
 					See all
 				</Link>
 			</div>
 			<div className="products-preview">
 				{!!productsPreview.length &&
-					productsPreview.map(product => <ProductCard product={product} />)}
+					productsPreview.map((product, index) => (
+						<ProductCard key={index} product={product} />
+					))}
 			</div>
 		</div>
 	);
@@ -27,7 +29,7 @@ const CollectionPreview = ({ category }) => {
 
 CollectionPreview.propTypes = {
 	category: PropTypes.shape({
-		product: PropTypes.array.isRequired,
+		products: PropTypes.array.isRequired,
 		_id: PropTypes.string.isRequired,
 		name: PropTypes.string.isRequired,
 		image: PropTypes.string.isRequired,

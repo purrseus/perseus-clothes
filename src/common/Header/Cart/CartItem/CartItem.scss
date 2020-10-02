@@ -1,0 +1,47 @@
+.item {
+	display: flex;
+	padding: 4px;
+	margin-right: 4px;
+	border-bottom: 1px solid #ddd;
+
+	.image {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+
+		width: 80px;
+		height: 80px;
+	}
+
+	.details {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+
+		margin: 8px 8px;
+		flex-grow: 1;
+
+		.name {
+			margin-bottom: 4px;
+			width: 145px;
+
+			text-align: left;
+			font-size: 18px;
+			font-weight: 300;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		.price {
+			font-size: 16px;
+			font-weight: 400;
+			margin-bottom: 4px;
+		}
+
+		.quantity {
+			font-weight: 300;
+		}
+	}
+}

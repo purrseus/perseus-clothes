@@ -1,46 +1,34 @@
-import React, { Suspense, useRef } from 'react';
+import React, { Suspense } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 import './App.css';
-import {
-	BrowserRouter as Router,
-	Redirect,
-	Route,
-	Switch,
-} from 'react-router-dom';
 import { ReactComponent as Loading } from 'assets/icons/loading-page.svg';
-import { ReactComponent as Arrow } from 'assets/icons/arrow.svg';
 
 import Header from 'common/Header';
+import ScrollTop from 'common/ScrollTop';
 
-// Lazy load
-const Categories = React.lazy(() => import('pages/Categories'));
-const Shop = React.lazy(() => import('pages/Shop'));
+const Home = React.lazy(() => import('pages/Home'));
 const Products = React.lazy(() => import('pages/Products'));
+const ProductsDetail = React.lazy(() => import('pages/ProductsDetail'));
 
 function App() {
-	const topElement = useRef(null);
-
 	return (
 		<div className="App">
-			<Suspense fallback={<Loading />}>
+			<Suspense fallback={<Loading className="loading-page" />}>
 				<Router>
-					<div className="top" ref={topElement}></div>
 					<Header />
 
 					<Switch>
-						<Redirect exact path="/" to="/categories" />
-						<Route exact path="/categories" component={Categories} />
-						<Route exact path="/shop" component={Shop} />
-						<Route exact path="/shop/:category" component={Products} />
+						<Route exact path="/" component={Home} />
+						<Route exact path="/products" component={Products} />
+						<Route
+							exact
+							path="/products/:category"
+							component={ProductsDetail}
+						/>
 					</Switch>
 
-					<div
-						className="scroll-to-top"
-						onClick={() => {
-							topElement.current.scrollIntoView({ behavior: 'smooth' });
-						}}
-					>
-						<Arrow className="arrow-icon" />
-					</div>
+					<ScrollTop />
 				</Router>
 			</Suspense>
 		</div>

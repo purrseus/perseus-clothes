@@ -21,11 +21,8 @@ const Header = () => {
 			</div>
 
 			<div className="link-group">
-				<NavLink className="link" activeClassName="active" to="/categories">
-					Categories
-				</NavLink>
-				<NavLink className="link" activeClassName="active" to="/shop">
-					Shop
+				<NavLink className="link" activeClassName="active" to="/products">
+					Products
 				</NavLink>
 				<NavLink className="link" activeClassName="active" to="/contacts">
 					Contacts

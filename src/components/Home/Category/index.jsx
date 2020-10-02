@@ -5,7 +5,7 @@ import productApi from 'api/productAPI';
 import { getCategories } from 'redux/reducers/categoriesSlice';
 
 import './Category.scss';
-import ViewButton from '../ViewButton';
+import ShopNowButton from '../ShopNowButton';
 import { ReactComponent as LoadingComponent } from 'assets/icons/loading-component.svg';
 
 const Category = () => {
@@ -36,7 +36,7 @@ const Category = () => {
 							backgroundImage: `url(${category.image})`,
 						}}
 					>
-						<ViewButton content={category.name} />
+						<ShopNowButton content={category.name} />
 					</div>
 				))
 			) : (

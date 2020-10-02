@@ -13,21 +13,25 @@
 	transition: 0.2s ease-in-out;
 
 	.category-name {
-		text-transform: capitalize;
-		font-weight: 200;
-		letter-spacing: 2px;
-		margin: 5px;
-		transition: 0.2s ease-in;
+		font-weight: 300;
+
+		.name {
+			text-transform: capitalize;
+			font-weight: 200;
+			letter-spacing: 2px;
+			margin: 5px;
+			transition: 0.2s ease-in;
+		}
 	}
 
 	&:hover {
 		background-color: rgba(63, 63, 63, 0.644);
 		border: 2px solid #ccc;
+		color: white;
 
-		.category-name {
+		.category-name .name {
 			color: white;
 			font-weight: 300;
-			letter-spacing: 0px;
 		}
 	}
 }
