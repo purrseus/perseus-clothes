@@ -1,18 +1,19 @@
+@import 'assets/styles/common.scss';
+@import 'assets/styles/font.scss';
+@import 'assets/styles/color.scss';
+
 .collection-preview {
-	display: flex;
+	@include flex-center;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 	padding: 80px 0px 40px;
 
-	.collection-header {
+	&__header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-
 		width: 80%;
 
-		.collection-title {
+		&-title {
 			font-size: 40px;
 			font-weight: 400;
 			text-transform: capitalize;
@@ -21,16 +22,10 @@
 
 		.see-all {
 			padding: 10px 40px;
-			border: 2px solid #555;
-			background-color: #fff;
+			border: $border;
+			background-color: $white;
 			font-size: 20px;
-			transition: 0.3s ease-in-out;
-
-			&:hover {
-				border: 2px solid #111;
-				background-color: #333;
-				color: white;
-			}
+			@include button;
 		}
 	}
 
@@ -42,5 +37,5 @@
 
 .jackets,
 .woman {
-	background-color: #eee;
+	background-color: $light;
 }

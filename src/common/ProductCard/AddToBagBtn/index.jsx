@@ -2,28 +2,28 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 
-import { addToCart } from 'redux/reducers/cartSlice';
+import { addToBag } from 'redux/reducers/bagSlice';
 
-import './AddToCartBtn.scss';
+import './AddToBagBtn.scss';
 
-const AddToCartBtn = ({ product }) => {
+const AddToBagBtn = ({ product }) => {
 	const dispatch = useDispatch();
 
 	return (
 		<button
-			className="add-to-cart"
+			className="add-to-bag"
 			onClick={() => {
 				const cloneProduct = { ...product };
 				cloneProduct.quantity = 1;
-				dispatch(addToCart(cloneProduct));
+				dispatch(addToBag(cloneProduct));
 			}}
 		>
-			+ Add to cart
+			+ Add to bag
 		</button>
 	);
 };
 
-AddToCartBtn.propsTypes = {
+AddToBagBtn.propsTypes = {
 	product: PropTypes.shape({
 		id: PropTypes.string.isRequired,
 		image: PropTypes.string.isRequired,
@@ -32,4 +32,4 @@ AddToCartBtn.propsTypes = {
 	}),
 };
 
-export default AddToCartBtn;
+export default AddToBagBtn;

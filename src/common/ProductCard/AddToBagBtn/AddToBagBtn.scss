@@ -1,0 +1,12 @@
+@import 'assets/styles/color.scss';
+@import 'assets/styles/common.scss';
+@import 'assets/styles/font.scss';
+
+.add-to-bag {
+	font-weight: 500;
+	padding: 8px 16px;
+	border: 1px solid $gray;
+	opacity: 0;
+	cursor: pointer;
+	@include button;
+}

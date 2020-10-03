@@ -1,13 +1,16 @@
+@import 'assets/styles/common.scss';
+@import 'assets/styles/font.scss';
+@import 'assets/styles/color.scss';
+
 .item {
+	height: 100%;
 	display: flex;
 	padding: 4px;
 	margin-right: 4px;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid $light;
 
 	.image {
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
+		@include background;
 
 		width: 80px;
 		height: 80px;
@@ -27,15 +30,14 @@
 			width: 145px;
 
 			text-align: left;
-			font-size: 18px;
-			font-weight: 300;
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
+			font-size: $md;
+			font-weight: 400;
+			letter-spacing: 1px;
+			@include ellipsis;
 		}
 
 		.price {
-			font-size: 16px;
+			font-size: $md;
 			font-weight: 400;
 			margin-bottom: 4px;
 		}

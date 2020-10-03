@@ -1,17 +1,17 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import './Header.scss';
+import './NavBar.scss';
 import { ReactComponent as Logo } from 'assets/icons/logo.svg';
-import { ReactComponent as Search } from 'assets/icons/searching.svg';
+import { ReactComponent as Search } from 'assets/icons/search.svg';
 
-import Cart from 'common/Header/Cart';
+import Bag from 'common/NavBar/Bag';
 
-const Header = () => {
+const NavBar = () => {
 	return (
-		<div className="header">
-			<NavLink className="logo" to="/">
-				<Logo className="logo__icon" />
+		<div className="nav-bar">
+			<NavLink className="nav-bar__logo" to="/">
+				<Logo className="nav-bar__logo-icon" />
 				<h1>Perseus</h1>
 			</NavLink>
 
@@ -32,13 +32,13 @@ const Header = () => {
 				</NavLink>
 			</div>
 
-			<Cart />
+			<Bag />
 
-			<NavLink className="link signin-signout" to="">
+			<NavLink className="signin-signout" to="">
 				Sign In
 			</NavLink>
 		</div>
 	);
 };
 
-export default Header;
+export default NavBar;

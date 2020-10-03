@@ -1,11 +1,11 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import './App.css';
+import './App.scss';
 import { ReactComponent as Loading } from 'assets/icons/loading-page.svg';
 
-import Header from 'common/Header';
-import ScrollTop from 'common/ScrollTop';
+import NavBar from 'common/NavBar';
+import ScrollToTopBtn from 'common/ScrollToTopBtn';
 
 const Home = React.lazy(() => import('pages/Home'));
 const Products = React.lazy(() => import('pages/Products'));
@@ -16,7 +16,7 @@ function App() {
 		<div className="App">
 			<Suspense fallback={<Loading className="loading-page" />}>
 				<Router>
-					<Header />
+					<NavBar />
 
 					<Switch>
 						<Route exact path="/" component={Home} />
@@ -28,7 +28,7 @@ function App() {
 						/>
 					</Switch>
 
-					<ScrollTop />
+					<ScrollToTopBtn />
 				</Router>
 			</Suspense>
 		</div>

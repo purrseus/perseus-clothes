@@ -1,37 +1,38 @@
+@import 'assets/styles/common.scss';
+@import 'assets/styles/font.scss';
+@import 'assets/styles/color.scss';
+
 .btn {
 	position: absolute;
-	height: 80px;
-	width: 150px;
+	height: 100px;
+	width: 180px;
 
-	display: flex;
+	@include flex-center;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 
-	border: 2px solid #333;
+	border: $border;
 	background-color: rgba(255, 255, 255, 0.7);
-	transition: 0.2s ease-in-out;
+	transition: $transition;
 
-	.category-name {
-		font-weight: 300;
-
+	&__category-name {
 		.name {
+			font-size: 30px;
 			text-transform: capitalize;
-			font-weight: 200;
 			letter-spacing: 2px;
-			margin: 5px;
-			transition: 0.2s ease-in;
+			font-weight: 400;
 		}
-	}
 
-	&:hover {
-		background-color: rgba(63, 63, 63, 0.644);
-		border: 2px solid #ccc;
-		color: white;
+		.shop-now {
+			text-transform: capitalize;
+			font-weight: 400;
+			margin: 5px;
+			transition: $transition;
 
-		.category-name .name {
-			color: white;
-			font-weight: 300;
+			.right-arrow {
+				width: 35px;
+				height: 25px;
+				margin-bottom: -6px;
+			}
 		}
 	}
 }

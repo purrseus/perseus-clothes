@@ -11,8 +11,8 @@ const CollectionPreview = ({ category }) => {
 
 	return (
 		<div className={`collection-preview ${category.name}`}>
-			<div className="collection-header">
-				<h1 className="collection-title">{category.name}</h1>
+			<div className="collection-preview__header">
+				<h1 className="collection-preview__header-title">{category.name}</h1>
 				<Link to={`/products/${category.name}`} className="see-all">
 					See all
 				</Link>

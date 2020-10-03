@@ -2,12 +2,10 @@
 @import 'assets/styles/font.scss';
 @import 'assets/styles/color.scss';
 
-.products {
-	width: 100%;
-	min-height: 100vh;
-	padding: 40px 0px;
+.App {
+	text-align: center;
 
-	.loading-component {
+	.loading-page {
 		@include loading;
 	}
 }

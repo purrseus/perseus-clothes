@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './CartItem.scss';
+import './ItemInBag.scss';
 
-const CartItem = ({ product }) => {
+const ItemInBag = ({ product }) => {
 	return (
 		<div className="item">
 			<div
@@ -19,7 +19,7 @@ const CartItem = ({ product }) => {
 	);
 };
 
-CartItem.propTypes = {
+ItemInBag.propTypes = {
 	product: PropTypes.shape({
 		id: PropTypes.string.isRequired,
 		image: PropTypes.string.isRequired,
@@ -29,4 +29,4 @@ CartItem.propTypes = {
 	}),
 };
 
-export default CartItem;
+export default ItemInBag;

@@ -1,8 +1,10 @@
+@import 'assets/styles/common.scss';
+@import 'assets/styles/font.scss';
+@import 'assets/styles/color.scss';
+
 .products-detail {
-	display: flex;
+	@include flex-center;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 	min-height: 100vh;
 	padding: 80px 0px 40px;
 

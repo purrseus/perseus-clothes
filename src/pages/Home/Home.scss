@@ -1,6 +1,8 @@
+@import 'assets/styles/common.scss';
+@import 'assets/styles/font.scss';
+@import 'assets/styles/color.scss';
+
 .home {
 	min-height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	@include flex-center;
 }
