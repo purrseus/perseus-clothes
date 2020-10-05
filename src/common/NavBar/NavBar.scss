@@ -3,77 +3,82 @@
 @import 'assets/styles/font.scss';
 
 .nav-bar {
-	width: 100%;
-	max-height: 60px;
+  width: 100%;
+  max-height: 60px;
 
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
-	position: fixed;
-	z-index: 1000;
+  position: fixed;
+  z-index: 1000;
 
-	background-color: $white;
-	box-shadow: $box-shadow;
+  background-color: $white;
+  box-shadow: $box-shadow;
 
-	&__logo {
-		display: flex;
-		align-items: center;
-		padding: 0 5px;
+  &__logo {
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
 
-		&-icon {
-			@include icon-size;
-		}
+    &-icon {
+      @include icon-size;
+    }
 
-		h1 {
-			font-family: 'Dosis', sans-serif;
-			height: 40px;
-			margin-left: 15px;
-			letter-spacing: 2px;
-		}
-	}
+    h1 {
+      font-family: 'Dosis', sans-serif;
+      height: 40px;
+      margin-left: 15px;
+      letter-spacing: 2px;
+    }
+  }
 
-	.search {
-		display: flex;
-		background-color: $light;
-		padding: 3px;
-		border-radius: 4px;
+  .search {
+    display: flex;
+    background-color: #eee;
+    padding: 3px;
+    border-radius: 4px;
 
-		&-icon {
-			width: 20px;
-			height: 35px;
-			margin-left: 10px;
-		}
+    &-icon {
+      width: 20px;
+      height: 35px;
+      margin-left: 10px;
+    }
 
-		&-input {
-			margin-left: 10px;
-			background-color: transparent;
-			width: 300px;
-		}
-	}
+    &-input {
+      margin-left: 10px;
+      background-color: transparent;
+      width: 300px;
+    }
+  }
 
-	.link-group {
-		display: flex;
-		align-items: center;
-		font-family: 'Sarabun', sans-serif;
+  .link-group {
+    display: flex;
+    align-items: center;
+    font-family: 'Sarabun', sans-serif;
 
-		.link {
-			padding: 16px 0px;
-			margin: 0 20px;
+    .link {
+      padding: 16px 0px;
+      margin: 0 20px;
 
-			font-size: $nav-font-size;
-			letter-spacing: 1px;
-			text-transform: uppercase;
-		}
+      font-size: $nav-font-size;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: $color-transition;
 
-		.active {
-			padding-top: 20px;
-			border-bottom: 3px solid #555;
-		}
-	}
+      &:hover {
+        color: $gray;
+      }
+    }
 
-	.signin-signout {
-		display: block;
-		font-size: $nav-font-size;
-	}
+    .active {
+      padding-top: 20px;
+      border-bottom: 3px solid #555;
+    }
+  }
+
+  .signin-signout {
+    display: block;
+    font-size: $nav-font-size;
+  }
 }

@@ -6,14 +6,14 @@ import categoryReducer from 'redux/reducers/categorySlice';
 import bagReducer from 'redux/reducers/bagSlice';
 
 const rootReducer = {
-	auth: authReducer,
-	categories: categoriesReducer,
-	category: categoryReducer,
-	bag: bagReducer,
+  auth: authReducer,
+  categories: categoriesReducer,
+  category: categoryReducer,
+  bag: bagReducer,
 };
 
 const store = configureStore({
-	reducer: rootReducer,
+  reducer: rootReducer,
 });
 
 export default store;

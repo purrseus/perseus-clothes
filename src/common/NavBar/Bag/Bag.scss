@@ -3,85 +3,88 @@
 @import 'assets/styles/color.scss';
 
 .wrap-bag {
-	position: relative;
-	display: flex;
-	align-items: center;
-	height: 60px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
 
-	.bag {
-		position: relative;
-		@include flex-center;
+  .bag {
+    position: relative;
+    @include flex-center;
 
-		&-icon {
-			@include icon-size;
-			cursor: pointer;
-		}
+    &-icon {
+      @include icon-size;
+      cursor: pointer;
+    }
 
-		&__quantity {
-			position: absolute;
-			top: 18px;
-			z-index: -1;
+    &__quantity {
+      position: absolute;
+      top: 18px;
+      z-index: -1;
 
-			font-size: $sm;
-			font-weight: 300;
-			text-align: center;
-		}
-	}
+      font-size: $sm;
+      font-weight: 300;
+      text-align: center;
+    }
+  }
 
-	.arrow {
-		position: absolute;
-		right: -10px;
-		transform: rotate(180deg);
+  .arrow {
+    position: absolute;
+    right: -10px;
+    transform: rotate(180deg);
 
-		width: 10px;
-		height: 10px;
-	}
+    width: 10px;
+    height: 10px;
+  }
 
-	.bag-dropdown {
-		position: absolute;
-		z-index: 10;
-		top: 60px;
-		right: -20px;
+  .bag-dropdown {
+    position: absolute;
+    z-index: 10;
+    top: calc(100% + 20px);
+    right: -20px;
+    padding: 15px 5px;
 
-		display: none;
-		opacity: 0;
-		padding: 15px 5px;
+    width: 280px;
+    height: 350px;
 
-		width: 280px;
-		height: 350px;
+    background-color: $white;
+    box-shadow: $box-shadow;
+    border: $border;
 
-		background-color: $white;
-		box-shadow: $box-shadow;
-		border: $border;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s ease-in-out;
 
-		.bag-content {
-			height: 85%;
-			overflow-y: scroll;
+    .bag-content {
+      height: 85%;
+      overflow-y: scroll;
 
-			.empty {
-				display: block;
-				margin: calc(100% / 2.1) 0px;
-				font-size: $lg;
-				color: $gray;
-			}
-		}
+      .empty {
+        display: block;
+        margin: calc(100% / 2.1) 0px;
+        font-size: $lg;
+        color: $gray;
+      }
+    }
 
-		.checkout-btn {
-			display: block;
-			width: 80%;
-			text-transform: uppercase;
-			letter-spacing: 2px;
+    .checkout-btn {
+      display: block;
+      width: 80%;
+      text-transform: uppercase;
+      letter-spacing: 2px;
 
-			margin: 12px auto;
-			padding: 8px 0px;
+      margin: 12px auto;
+      padding: 8px 0px;
 
-			border: $border;
-			@include button;
-		}
-	}
+      border: $border;
+      transition: $color-transition;
+      @include button;
+    }
+  }
 
-	&:hover .bag-dropdown {
-		display: block;
-		opacity: 1;
-	}
+  &:hover .bag-dropdown{
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+  }
 }

@@ -2,12 +2,7 @@
 @import 'assets/styles/font.scss';
 @import 'assets/styles/color.scss';
 
-.home {
-  width: 100%;
+.categories {
   min-height: 100vh;
-  padding: 40px 0px;
-
-  .loading-component {
-    @include loading;
-  }
+  @include flex-center;
 }

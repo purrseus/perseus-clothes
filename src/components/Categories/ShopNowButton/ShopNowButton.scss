@@ -1,0 +1,36 @@
+@import 'assets/styles/common.scss';
+@import 'assets/styles/font.scss';
+@import 'assets/styles/color.scss';
+
+.btn {
+  position: absolute;
+  height: 100px;
+  width: 180px;
+
+  @include flex-center;
+  flex-direction: column;
+
+  border: $border;
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: $transition;
+
+  &__category-name {
+    .name {
+      font-size: 30px;
+      text-transform: capitalize;
+      letter-spacing: 2px;
+      font-weight: 400;
+    }
+
+    .shop-now {
+      text-transform: capitalize;
+      font-weight: 400;
+      margin: 5px;
+      transition: $transition;
+
+      .right-arrow {
+        @include arrow;
+      }
+    }
+  }
+}

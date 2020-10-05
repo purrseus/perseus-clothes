@@ -1,0 +1,36 @@
+@import 'assets/styles/common.scss';
+@import 'assets/styles/font.scss';
+@import 'assets/styles/color.scss';
+
+.collection-preview {
+  @include flex-center;
+  flex-direction: column;
+  padding: 40px 0px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+
+    &-title {
+      font-size: 40px;
+      font-weight: 400;
+      text-transform: capitalize;
+      letter-spacing: 2px;
+    }
+
+    .see-all {
+      @include main-btn;
+    }
+  }
+
+  .products-preview {
+    height: 100%;
+    display: flex;
+  }
+}
+
+.sneakers {
+  background-color: $light;
+}

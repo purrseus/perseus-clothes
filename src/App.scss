@@ -3,9 +3,9 @@
 @import 'assets/styles/color.scss';
 
 .App {
-	text-align: center;
+  text-align: center;
 
-	.loading-page {
-		@include loading;
-	}
+  .loading-page {
+    @include loading;
+  }
 }

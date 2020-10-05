@@ -10,41 +10,41 @@ import productApi from 'api/productAPI';
 import ProductCard from 'common/ProductCard';
 
 const ProductsDetail = () => {
-	const { category } = useParams();
+  const { category } = useParams();
 
-	const dispatch = useDispatch();
-	const categoryState = useSelector(state => state.category);
-	const filterData = categoryState.filter(
-		product => product.category === category,
-	);
+  const dispatch = useDispatch();
+  const categoryState = useSelector(state => state.category);
+  const filterData = categoryState.filter(
+    product => product.category === category,
+  );
 
-	useEffect(() => {
-		const fetchCategory = async () => {
-			try {
-				const categoryData = await productApi.getAll();
-				dispatch(getCategory(categoryData));
-			} catch (error) {
-				throw error;
-			}
-		};
-		fetchCategory();
-		window.scrollTo(0, 0);
-	}, [category, dispatch]);
+  useEffect(() => {
+    const fetchCategory = async () => {
+      try {
+        const categoryData = await productApi.getAll();
+        dispatch(getCategory(categoryData));
+      } catch (error) {
+        throw error;
+      }
+    };
+    fetchCategory();
+    window.scrollTo(0, 0);
+  }, [category, dispatch]);
 
-	return (
-		<div className="products-detail">
-			<h1>{category}</h1>
-			<div className="list">
-				{!!categoryState.length ? (
-					filterData.map((product, index) => (
-						<ProductCard key={index} product={product} />
-					))
-				) : (
-					<LoadingComponent className="loading-component" />
-				)}
-			</div>
-		</div>
-	);
+  return (
+    <div className="products-detail">
+      <h1>{category}</h1>
+      <div className="list">
+        {!!categoryState.length ? (
+          filterData.map((product, index) => (
+            <ProductCard key={index} product={product} />
+          ))
+        ) : (
+          <LoadingComponent className="loading-component" />
+        )}
+      </div>
+    </div>
+  );
 };
 
 export default ProductsDetail;

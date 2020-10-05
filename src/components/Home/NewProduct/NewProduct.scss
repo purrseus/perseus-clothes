@@ -1,0 +1,55 @@
+@import 'assets/styles/common.scss';
+@import 'assets/styles/font.scss';
+@import 'assets/styles/color.scss';
+
+.new-product {
+  min-height: 80vh;
+  padding-top: 20px;
+  
+  @include flex-center;
+
+  &__content {
+    width: 50%;
+    height: 100%;
+    background-color: $white;
+    @include flex-center;
+    flex-direction: column;
+
+    .wrap {
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+
+
+      .name {
+        font-size: 40px;
+        font-weight: 400;
+        text-align: left;
+        margin: 10px 0px;
+      }
+  
+      .property {
+        margin: 4px 0px;
+        font-size: 18px;
+        letter-spacing: 1px;
+      }
+  
+      .main-btn {
+        width: 70%;
+        margin-top: 30px;
+        @include main-btn;
+
+        .arrow {
+          @include arrow;
+        }
+      }
+    }
+  }
+
+  &__background {
+    width: 50%;
+    height: 550px;
+    background-image: url(../../../assets/images/jacket.jpeg);
+    @include background;
+  }
+}

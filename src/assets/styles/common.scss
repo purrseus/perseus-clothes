@@ -3,49 +3,65 @@
 $box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.25);
 $border: 2px solid $gray;
 $transition: 0.3s ease-in-out;
+$color-transition: color 0.3s ease-in-out;
 
 @mixin icon-size {
-	width: 40px;
-	height: 40px;
+  width: 40px;
+  height: 40px;
 }
 
 @mixin flex-center {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin background {
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 @mixin ellipsis {
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @mixin loading {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @mixin button {
-	box-shadow: 4px 4px 0px 1px #333;
+  box-shadow: 4px 4px 0px 1px #333;
 
-	&:hover{
-		background-color: $white;
-		color: $gray;
-	}
+  &:hover {
+    background-color: $white;
+    color: $gray;
+  }
 
-	&:active {
-		border-color: $black;
-		color: $black;
-		transform: translate(4px, 4px);
-		box-shadow: none;
-	}
+  &:active {
+    border-color: $black;
+    color: $black;
+    transform: translate(4px, 4px);
+    box-shadow: none;
+  }
+}
+
+@mixin main-btn {
+	padding: 10px 40px;
+	border: $border;
+	background-color: $white;
+	font-size: 20px;
+	transition: $color-transition;
+	@include button;
+}
+
+@mixin arrow {
+	width: 35px;
+	height: 25px;
+	margin-bottom: -6px;
 }

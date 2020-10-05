@@ -3,47 +3,47 @@
 @import 'assets/styles/color.scss';
 
 .item {
-	height: 100%;
-	display: flex;
-	padding: 4px;
-	margin-right: 4px;
-	border-bottom: 1px solid $light;
+  height: 100%;
+  display: flex;
+  padding: 4px;
+  margin-right: 4px;
+  border-bottom: 1px solid $light;
 
-	.image {
-		@include background;
+  .image {
+    @include background;
 
-		width: 80px;
-		height: 80px;
-	}
+    width: 80px;
+    height: 80px;
+  }
 
-	.details {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: flex-start;
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 
-		margin: 8px 8px;
-		flex-grow: 1;
+    margin: 8px 8px;
+    flex-grow: 1;
 
-		.name {
-			margin-bottom: 4px;
-			width: 145px;
+    .name {
+      margin-bottom: 4px;
+      width: 145px;
 
-			text-align: left;
-			font-size: $md;
-			font-weight: 400;
-			letter-spacing: 1px;
-			@include ellipsis;
-		}
+      text-align: left;
+      font-size: $md;
+      font-weight: 400;
+      letter-spacing: 1px;
+      @include ellipsis;
+    }
 
-		.price {
-			font-size: $md;
-			font-weight: 400;
-			margin-bottom: 4px;
-		}
+    .price {
+      font-size: $md;
+      font-weight: 400;
+      margin-bottom: 4px;
+    }
 
-		.quantity {
-			font-weight: 300;
-		}
-	}
+    .quantity {
+      font-weight: 300;
+    }
+  }
 }
