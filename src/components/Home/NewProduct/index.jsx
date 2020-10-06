@@ -12,6 +12,7 @@ const NewProduct = ({ product }) => {
         <div className="wrap">
           <h2 className="name">{product.name}</h2>
           <p className="property">Comfortable. Wearable. Available now!</p>
+          <div className="line"></div>
           <Link to={`/products/jackets`} className="main-btn">
             Shop now!
             <Arrow className="arrow" />

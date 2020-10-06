@@ -1,17 +1,17 @@
 @import 'assets/styles/common.scss';
 @import 'assets/styles/font.scss';
 @import 'assets/styles/color.scss';
-`
+
 .category-wrap {
   display: grid;
   grid-template-areas:
-    'woman woman woman man man man'
+    'women women women men men men'
     'hats hats jackets jackets sneakers sneakers';
   grid-gap: 30px;
 
   flex-grow: 1;
   max-width: 75%;
-  padding: 100px 0px 50px;
+  padding: 50px 0px;
 
   .category {
     @include flex-center;

@@ -15,7 +15,7 @@ axiosClient.interceptors.request.use(
   error => {
     // Handle error
     throw error;
-  },
+  }
 );
 
 axiosClient.interceptors.response.use(
@@ -26,7 +26,7 @@ axiosClient.interceptors.response.use(
   error => {
     // Handle error
     throw error;
-  },
+  }
 );
 
 export default axiosClient;

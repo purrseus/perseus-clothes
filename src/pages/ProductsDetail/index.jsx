@@ -15,7 +15,7 @@ const ProductsDetail = () => {
   const dispatch = useDispatch();
   const categoryState = useSelector(state => state.category);
   const filterData = categoryState.filter(
-    product => product.category === category,
+    product => product.category === category
   );
 
   useEffect(() => {

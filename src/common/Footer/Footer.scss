@@ -1,0 +1,82 @@
+@import 'assets/styles/common.scss';
+@import 'assets/styles/font.scss';
+@import 'assets/styles/color.scss';
+
+.footer {
+  width: 100%;
+  padding: 20px 60px;
+  background-color: $light;
+  display: flex;
+  justify-content: space-between;
+
+  .children {
+    padding: 30px;
+
+    h3 {
+      font-size: 20px;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+    ul {
+      li {
+        a {
+          display: block;
+          width: 100%;
+          text-align: left;
+          margin: 10px 0px;
+
+          &:hover {
+            color: rgb(17, 94, 129);
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+.bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: futura-pt, sans-serif;
+  padding: 20px 5px;
+  background-color: #ccc;
+
+  .left {
+    padding: 0px 10px;
+    font-size: 12px;
+  }
+
+  .right {
+    display: flex;
+    div {
+      padding: 0px 10px;
+      font-size: 12px;
+
+      a {
+        &:hover {
+          color: rgb(17, 94, 129);
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .between {
+      position: relative;
+      &::before {
+        content: '|';
+        display: inline;
+        position: absolute;
+        left: -3px;
+      }
+
+      &::after {
+        content: '|';
+        display: inline;
+        position: absolute;
+        right: -3px;
+      }
+    }
+  }
+}

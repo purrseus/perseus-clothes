@@ -19,9 +19,7 @@ const Bag = () => {
   const location = useLocation();
 
   return (
-    <div
-      className="wrap-bag"
-    >
+    <div className="wrap-bag">
       <div className="bag">
         <BagIcon className="bag-icon" />
         <span className="bag__quantity">{quantityProductInBag || ''}</span>
@@ -42,10 +40,7 @@ const Bag = () => {
             )}
           </div>
           {!!quantityProductInBag && (
-            <Link
-              className="checkout-btn"
-              to="/bag"
-            >
+            <Link className="checkout-btn" to="/bag">
               Checkout
             </Link>
           )}

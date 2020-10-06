@@ -9,7 +9,7 @@ const bag = createSlice({
   reducers: {
     addToBag: (state, action) => {
       const checkProduct = state.find(
-        product => product.id === action.payload.id,
+        product => product.id === action.payload.id
       );
       !checkProduct
         ? state.push(action.payload)

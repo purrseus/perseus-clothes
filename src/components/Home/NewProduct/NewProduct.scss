@@ -4,8 +4,6 @@
 
 .new-product {
   min-height: 80vh;
-  padding-top: 20px;
-  
   @include flex-center;
 
   &__content {
@@ -20,23 +18,30 @@
       display: flex;
       flex-direction: column;
 
-
       .name {
         font-size: 40px;
         font-weight: 400;
         text-align: left;
         margin: 10px 0px;
       }
-  
+
       .property {
         margin: 4px 0px;
         font-size: 18px;
+        color: #333;
         letter-spacing: 1px;
       }
-  
+
+      .line {
+        margin-top: 10px;
+        height: 1px;
+        width: 80%;
+        background-color: $light-gray;
+      }
+
       .main-btn {
-        width: 70%;
-        margin-top: 30px;
+        width: 60%;
+        margin-top: 20px;
         @include main-btn;
 
         .arrow {
@@ -48,7 +53,7 @@
 
   &__background {
     width: 50%;
-    height: 550px;
+    height: 600px;
     background-image: url(../../../assets/images/jacket.jpeg);
     @include background;
   }

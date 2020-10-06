@@ -20,7 +20,7 @@
       letter-spacing: 2px;
     }
 
-    .see-all {
+    .view-all {
       @include main-btn;
     }
   }
@@ -31,6 +31,6 @@
   }
 }
 
-.sneakers {
+.hats {
   background-color: $light;
 }

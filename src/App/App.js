@@ -4,7 +4,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.scss';
 import { ReactComponent as Loading } from 'assets/icons/loading-page.svg';
 
+import TopBar from 'common/TopBar';
 import NavBar from 'common/NavBar';
+import Footer from 'common/Footer';
 import ScrollToTopBtn from 'common/ScrollToTopBtn';
 
 const Categories = React.lazy(() => import('pages/Categories'));
@@ -16,6 +18,7 @@ function App() {
     <div className="App">
       <Suspense fallback={<Loading className="loading-page" />}>
         <Router>
+          <TopBar />
           <NavBar />
 
           <Switch>
@@ -28,6 +31,7 @@ function App() {
             />
           </Switch>
 
+          <Footer />
           <ScrollToTopBtn />
         </Router>
       </Suspense>

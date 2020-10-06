@@ -52,16 +52,17 @@ $color-transition: color 0.3s ease-in-out;
 }
 
 @mixin main-btn {
-	padding: 10px 40px;
-	border: $border;
-	background-color: $white;
-	font-size: 20px;
-	transition: $color-transition;
-	@include button;
+  padding: 10px 30px;
+  border: $border;
+  background-color: $white;
+  font-size: 20px;
+  transition: $color-transition;
+  @include button;
 }
 
 @mixin arrow {
-	width: 35px;
-	height: 25px;
-	margin-bottom: -6px;
+  margin-left: 10px;
+  width: 30px;
+  height: 25px;
+  margin-bottom: -6px;
 }

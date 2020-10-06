@@ -24,19 +24,16 @@ const NavBar = () => {
         <NavLink className="link" activeClassName="active" to="/categories">
           Categories
         </NavLink>
-        <NavLink className="link" activeClassName="active" to="/contacts">
-          Contacts
+        <NavLink className="link" activeClassName="active" to="/products/men">
+          Men
         </NavLink>
-        <NavLink className="link" activeClassName="active" to="/brands">
-          Brands
+        <NavLink className="link" activeClassName="active" to="/products/women">
+          Women
         </NavLink>
+        <div className="link">Contacts</div>
       </div>
 
       <Bag />
-
-      <NavLink className="signin-signout" to="">
-        Sign In
-      </NavLink>
     </div>
   );
 };

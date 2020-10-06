@@ -10,11 +10,8 @@
   justify-content: space-around;
   align-items: center;
 
-  position: fixed;
-  z-index: 1000;
-
   background-color: $white;
-  box-shadow: $box-shadow;
+  box-shadow: 0 10px 15px -2px rgba(0, 0, 0, 0.09);
 
   &__logo {
     display: flex;
@@ -64,6 +61,7 @@
       font-size: $nav-font-size;
       letter-spacing: 1px;
       text-transform: uppercase;
+      cursor: pointer;
       transition: $color-transition;
 
       &:hover {

@@ -1,0 +1,27 @@
+@import 'assets/styles/color.scss';
+@import 'assets/styles/common.scss';
+@import 'assets/styles/font.scss';
+
+.top-bar {
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    background-color: $light;
+
+    li {
+      padding: 6px 16px;
+      border-left: 1px solid #ccc;
+
+      a {
+        font-family: futura-pt, sans-serif;
+        font-size: 12px;
+        color: $gray;
+        transition: $transition;
+
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+  }
+}

@@ -6,6 +6,7 @@ import { ReactComponent as LoadingComponent } from 'assets/icons/loading-compone
 
 import productApi from 'api/productAPI';
 import { getCategories } from 'redux/reducers/categoriesSlice';
+
 import NewProduct from 'components/Home/NewProduct';
 import CollectionPreview from 'components/Home/CollectionPreview';
 
@@ -27,12 +28,13 @@ const Home = () => {
 
   return (
     <div className="home">
-      {!!categoriesState.length
-      ? <div>
-          <NewProduct product={categoriesState[1].products[3]}/>
+      {!!categoriesState.length ? (
+        <div>
+          <NewProduct product={categoriesState[1].products[3]} />
+          <CollectionPreview category={categoriesState[0]} />
           <CollectionPreview category={categoriesState[2]} />
         </div>
-       : (
+      ) : (
         <LoadingComponent className="loading-component" />
       )}
     </div>
