@@ -1,0 +1,36 @@
+@import 'assets/styles/common.scss';
+@import 'assets/styles/font.scss';
+@import 'assets/styles/color.scss';
+
+.check-out {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+
+  &-items {
+    margin-top: 40px;
+    @include flex-center;
+    flex-direction: column;
+    width: 70%;
+  }
+
+  .total {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+    span {
+      font-size: 30px;
+      font-weight: 500;
+    }
+  }
+
+  .check-out-btn {
+    padding: 8px 16px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    @include main-btn;
+  }
+}

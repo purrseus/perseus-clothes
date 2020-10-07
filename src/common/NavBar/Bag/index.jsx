@@ -26,11 +26,11 @@ const Bag = () => {
       </div>
       <ArrowIcon className="arrow" />
 
-      {location.pathname !== '/bag' && (
+      {location.pathname !== '/check-out' && (
         <div className="bag-dropdown">
           <div className="bag-content">
             {!quantityProductInBag ? (
-              <span className="empty">Your bag is empty!</span>
+              <span className="empty">Your bag is currently empty.</span>
             ) : (
               <div className="bag-items">
                 {bagState.map((product, index) => (
@@ -40,8 +40,8 @@ const Bag = () => {
             )}
           </div>
           {!!quantityProductInBag && (
-            <Link className="checkout-btn" to="/bag">
-              Checkout
+            <Link className="checkout-btn" to="/check-out">
+              Check out
             </Link>
           )}
         </div>

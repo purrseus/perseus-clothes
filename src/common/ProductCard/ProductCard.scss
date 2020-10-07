@@ -3,9 +3,9 @@
 @import 'assets/styles/font.scss';
 
 .product-card {
-  width: 230px;
-  height: 320px;
-  margin: 20px 5px;
+  width: 330px;
+  height: 400px;
+  margin: 20px;
   border: 1px solid transparent;
   transition: $transition;
 
@@ -13,7 +13,7 @@
     @include background;
     @include flex-center;
     width: 100%;
-    height: 230px;
+    height: 330px;
 
     &:hover :first-child {
       opacity: 1;
@@ -22,17 +22,18 @@
 
   .details {
     text-align: left;
-    padding: 0px 4px;
+    padding: 10px 4px 20px;
 
     &__name {
-      font-size: $lg;
+      font-size: 17px;
+      font-weight: 500;
       @include ellipsis;
-      margin: 8px 0px;
     }
 
     &__price {
-      font-size: $lg;
-      margin: 2px 80px 0 0;
+      font-size: $md;
+      margin: 0px 140px 0 0;
+      color: $gray;
     }
 
     &__id {
@@ -44,6 +45,5 @@
 
   &:hover {
     border: 1px solid $black;
-    transform: scale(1.01);
   }
 }

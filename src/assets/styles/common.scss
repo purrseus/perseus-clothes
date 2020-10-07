@@ -40,7 +40,6 @@ $color-transition: color 0.3s ease-in-out;
 
   &:hover {
     background-color: $white;
-    color: $gray;
   }
 
   &:active {
@@ -56,7 +55,6 @@ $color-transition: color 0.3s ease-in-out;
   border: $border;
   background-color: $white;
   font-size: 20px;
-  transition: $color-transition;
   @include button;
 }
 

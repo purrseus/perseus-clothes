@@ -1,0 +1,44 @@
+@import 'assets/styles/common.scss';
+@import 'assets/styles/font.scss';
+@import 'assets/styles/color.scss';
+
+.check-out-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  border-bottom: 1px solid $light;
+
+  .image {
+    width: 150px;
+    height: 150px;
+    @include background;
+  }
+
+  .name {
+    font-size: $lg;
+    font-weight: 500;
+  }
+
+  .price {
+    color: $gray;
+  }
+
+  .quantity {
+    display: flex;
+    align-items: center;
+
+    .count {
+      margin: 0px 10px;
+      font-size: 18px;
+    }
+
+    button {
+      width: 30px;
+      height: 30px;
+      border: $border;
+      font-size: 20px;
+    }
+  }
+}

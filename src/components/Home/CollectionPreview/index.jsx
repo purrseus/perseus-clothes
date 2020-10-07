@@ -7,7 +7,7 @@ import './CollectionPreview.scss';
 import ProductCard from 'common/ProductCard';
 
 const CollectionPreview = ({ category }) => {
-  const productsPreview = category.products.slice(0, 5);
+  const productsPreview = category.products.slice(0, 3);
 
   return (
     <div className={`collection-preview ${category.name}`}>

@@ -9,16 +9,27 @@ const bag = createSlice({
   reducers: {
     addToBag: (state, action) => {
       const checkProduct = state.find(
-        product => product.id === action.payload.id
+        product => product.id === action.payload.id,
       );
       !checkProduct
         ? state.push(action.payload)
         : (state[state.indexOf(checkProduct)].quantity += 1);
       localStorage.setItem('bag', JSON.stringify(state));
     },
+
+    removeProduct: (state, action) => {
+      const checkProduct = state.find(
+        product => product.id === action.payload.id,
+      );
+
+      action.payload.quantity > 1
+        ? (state[state.indexOf(checkProduct)].quantity -= 1)
+        : state.splice(state.indexOf(checkProduct), 1);
+      localStorage.setItem('bag', JSON.stringify(state));
+    },
   },
 });
 
 const { reducer, actions } = bag;
-export const { addToBag } = actions;
+export const { addToBag, removeProduct } = actions;
 export default reducer;

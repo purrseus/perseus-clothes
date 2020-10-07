@@ -14,8 +14,8 @@ const ProductCard = ({ product }) => {
         <AddToBagBtn product={product} />
       </div>
       <div className="details">
-        <div className="details__name">{product.name}</div>
-        <span className="details__price">{`$${product.price}`}</span>
+        <h4 className="details__name">{product.name}</h4>
+        <span className="details__price">{`$${product.price}.99 USD`}</span>
         <span className="details__id"># {product.id}</span>
       </div>
     </div>

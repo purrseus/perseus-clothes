@@ -40,8 +40,9 @@
       }
 
       .main-btn {
-        width: 60%;
+        width: 65%;
         margin-top: 20px;
+        text-transform: uppercase;
         @include main-btn;
 
         .arrow {

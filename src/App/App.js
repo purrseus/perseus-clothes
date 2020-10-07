@@ -12,6 +12,7 @@ import ScrollToTopBtn from 'common/ScrollToTopBtn';
 const Categories = React.lazy(() => import('pages/Categories'));
 const Home = React.lazy(() => import('pages/Home'));
 const ProductsDetail = React.lazy(() => import('pages/ProductsDetail'));
+const CheckOut = React.lazy(() => import('pages/CheckOut'));
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
               path="/products/:category"
               component={ProductsDetail}
             />
+            <Route exact path="/check-out" component={CheckOut} />
           </Switch>
 
           <Footer />

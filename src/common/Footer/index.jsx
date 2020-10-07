@@ -6,7 +6,7 @@ const Footer = () => {
     <>
       <div className="footer">
         <div className="children">
-          <h3>Help & Information</h3>
+          <h4>Help & Information</h4>
           <ul>
             <li>
               <a href="/">Help</a>
@@ -21,7 +21,7 @@ const Footer = () => {
         </div>
 
         <div className="children">
-          <h3>About PERSEUS</h3>
+          <h4>About PERSEUS</h4>
           <ul>
             <li>
               <a href="/">About Us</a>
@@ -39,7 +39,7 @@ const Footer = () => {
         </div>
 
         <div className="children">
-          <h3>More from PERSEUS</h3>
+          <h4>More from PERSEUS</h4>
           <ul>
             <li>
               <a href="/">Mobile and PERSEUS Apps</a>
