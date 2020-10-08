@@ -13,6 +13,7 @@ const Categories = React.lazy(() => import('pages/Categories'));
 const Home = React.lazy(() => import('pages/Home'));
 const ProductsDetail = React.lazy(() => import('pages/ProductsDetail'));
 const CheckOut = React.lazy(() => import('pages/CheckOut'));
+const Search = React.lazy(() => import('pages/Search'));
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
               component={ProductsDetail}
             />
             <Route exact path="/check-out" component={CheckOut} />
+            <Route exact path="/search/:name" component={Search} />
           </Switch>
 
           <Footer />

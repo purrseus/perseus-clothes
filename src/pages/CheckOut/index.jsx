@@ -22,12 +22,16 @@ const CheckOut = () => {
         )}
       </div>
 
-      <div className="total">
-        <span>Total:</span>
-        <span>${totalPrice.toFixed(2)}</span>
-      </div>
+      {!!bagState.length && (
+        <>
+          <div className="total">
+            <span>Total:</span>
+            <span>${totalPrice.toFixed(2)}</span>
+          </div>
 
-      <button className="check-out-btn">Buy now!</button>
+          <button className="check-out-btn">Buy now!</button>
+        </>
+      )}
     </div>
   );
 };

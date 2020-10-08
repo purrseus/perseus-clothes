@@ -3,7 +3,9 @@
 @import 'assets/styles/font.scss';
 
 .add-to-bag {
+  width: 140px;
   font-weight: 500;
+  background-color: $white;
   padding: 8px 16px;
   border: 1px solid $gray;
   opacity: 0;

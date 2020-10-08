@@ -11,9 +11,12 @@
 
   &__background {
     @include background;
-    @include flex-center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     width: 100%;
     height: 330px;
+    padding-bottom: 10px;
 
     &:hover :first-child {
       opacity: 1;

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import './ProductCard.scss';
-import AddToBagBtn from './AddToBagBtn';
+import AddToBagBtn from '../AddToBagBtn';
 
 const ProductCard = ({ product }) => {
   return (

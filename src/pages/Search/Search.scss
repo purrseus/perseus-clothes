@@ -1,0 +1,26 @@
+@import 'assets/styles/common.scss';
+@import 'assets/styles/font.scss';
+@import 'assets/styles/color.scss';
+
+.search-list {
+  min-height: 50vh;
+  width: 100%;
+  padding: 30px 10%;
+  @include flex-center;
+  flex-direction: column;
+
+  .wrap-item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:hover :last-child {
+      opacity: 1;
+    }
+  }
+
+  .no-results {
+    text-transform: uppercase;
+  }
+}
