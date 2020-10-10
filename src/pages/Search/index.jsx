@@ -29,8 +29,8 @@ const Search = () => {
       {typeof result === 'object' && !!result.length ? (
         result.map((product, index) => {
           return (
-            <div class="wrap-item">
-              <CommonItem key={index} item={product} />
+            <div key={index} className="wrap-item">
+              <CommonItem item={product} />
               <AddToBagBtn product={product} />
             </div>
           );

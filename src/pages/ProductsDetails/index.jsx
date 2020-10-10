@@ -8,9 +8,12 @@ import { ReactComponent as LoadingComponent } from 'assets/icons/loading-compone
 import { getCategory } from 'redux/reducers/categorySlice';
 import productApi from 'api/productAPI';
 import ProductCard from 'common/ProductCard';
+import NotFound from 'pages/NotFound';
 
 const ProductsDetails = () => {
+  const categories = ['hats', 'jackets', 'sneakers', 'men', 'women'];
   const { category } = useParams();
+  console.log(categories.indexOf(category));
 
   const dispatch = useDispatch();
   const categoryState = useSelector(state => state.category);
@@ -32,18 +35,24 @@ const ProductsDetails = () => {
   }, [category, dispatch]);
 
   return (
-    <div className="products-details">
-      <h1>{category}</h1>
-      <div className="list">
-        {!!categoryState.length ? (
-          filterData.map((product, index) => (
-            <ProductCard key={index} product={product} />
-          ))
-        ) : (
-          <LoadingComponent className="loading-component" />
-        )}
-      </div>
-    </div>
+    <>
+      {categories.indexOf(category) !== -1 ? (
+        <div className="products-details">
+          <h1>{category}</h1>
+          <div className="list">
+            {!!categoryState.length ? (
+              filterData.map((product, index) => (
+                <ProductCard key={index} product={product} />
+              ))
+            ) : (
+              <LoadingComponent className="loading-component" />
+            )}
+          </div>
+        </div>
+      ) : (
+        <NotFound />
+      )}
+    </>
   );
 };
 

@@ -8,7 +8,7 @@ import TopBar from 'common/TopBar';
 import NavBar from 'common/NavBar';
 import Footer from 'common/Footer';
 import ScrollToTopBtn from 'common/ScrollToTopBtn';
-import NotFound from 'common/NotFound';
+import NotFound from 'pages/NotFound';
 
 const Categories = React.lazy(() => import('pages/Categories'));
 const Home = React.lazy(() => import('pages/Home'));

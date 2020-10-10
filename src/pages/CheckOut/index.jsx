@@ -45,7 +45,7 @@ const CheckOut = () => {
             <span>${totalPrice.toFixed(2)}</span>
           </div>
 
-          <button className="check-out-btn">
+          <div className="check-out-btn">
             <span>Pay now!</span>
             <StripeCheckout
               className="hide"
@@ -59,7 +59,7 @@ const CheckOut = () => {
               shippingAddress
               amount={totalPrice.toFixed(2) * 100}
               />
-          </button>
+          </div>
         </>
       )}
 
