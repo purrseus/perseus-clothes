@@ -1,14 +1,30 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import StripeCheckout from 'react-stripe-checkout';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import './CheckOut.scss';
+import Logo from 'assets/icons/logo.svg';
 
+import { cleanBag } from 'redux/reducers/bagSlice';
 import CheckOutItem from 'common/CommonItem';
-import useTotalPrice from 'hooks/useTotalPrice';
+
+toast.configure();
 
 const CheckOut = () => {
+  const dispatch = useDispatch();
   const bagState = useSelector(state => state.bag);
-  const totalPrice = useTotalPrice();
+  const totalPrice = bagState.reduce((acc, cur) => {
+    return acc + cur.quantity * (cur.price + 0.9);
+  }, 0);
+
+  const handleToken = (token) => {
+    if (token) {
+      toast("Success! Check your email for details", { type: "success" });
+      dispatch(cleanBag());
+    }
+  };
 
   return (
     <div className="check-out">
@@ -29,9 +45,25 @@ const CheckOut = () => {
             <span>${totalPrice.toFixed(2)}</span>
           </div>
 
-          <button className="check-out-btn">Buy now!</button>
+          <button className="check-out-btn">
+            <span>Pay now!</span>
+            <StripeCheckout
+              className="hide"
+              image={Logo}
+              name="Perseus Clothes Ltd."
+              panelLabel='Pay Now'
+              description={`Your total is $${totalPrice.toFixed(2)}`}
+              stripeKey={process.env.REACT_APP_STRIPE_KEY}
+              token={handleToken}
+              billingAddress
+              shippingAddress
+              amount={totalPrice.toFixed(2) * 100}
+              />
+          </button>
         </>
       )}
+
+      <ToastContainer />
     </div>
   );
 };

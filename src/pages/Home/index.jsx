@@ -23,7 +23,7 @@ const Home = () => {
         throw error;
       }
     };
-    fetchCategories();
+    fetchCategories()
   }, [dispatch]);
 
   return (

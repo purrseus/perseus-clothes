@@ -2,14 +2,14 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 
-import './ProductsDetail.scss';
+import './ProductsDetails.scss';
 import { ReactComponent as LoadingComponent } from 'assets/icons/loading-component.svg';
 
 import { getCategory } from 'redux/reducers/categorySlice';
 import productApi from 'api/productAPI';
 import ProductCard from 'common/ProductCard';
 
-const ProductsDetail = () => {
+const ProductsDetails = () => {
   const { category } = useParams();
 
   const dispatch = useDispatch();
@@ -32,7 +32,7 @@ const ProductsDetail = () => {
   }, [category, dispatch]);
 
   return (
-    <div className="products-detail">
+    <div className="products-details">
       <h1>{category}</h1>
       <div className="list">
         {!!categoryState.length ? (
@@ -47,4 +47,4 @@ const ProductsDetail = () => {
   );
 };
 
-export default ProductsDetail;
+export default ProductsDetails;

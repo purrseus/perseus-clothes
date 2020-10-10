@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  min-height: 60vh;
 
   &-items {
     margin-top: 40px;
@@ -28,9 +28,22 @@
   }
 
   .check-out-btn {
-    padding: 8px 16px;
+    position: relative;
+    @include flex-center;
     margin-bottom: 40px;
     cursor: pointer;
     @include main-btn;
+    padding: 0;
+    height: 40px;
+
+    span {
+      display: block;
+      padding: 0;
+      position: absolute;
+    }
+
+    .hide {
+      opacity: 0;
+    }
   }
 }

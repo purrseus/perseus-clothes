@@ -27,9 +27,13 @@ const bag = createSlice({
         : state.splice(state.indexOf(checkProduct), 1);
       localStorage.setItem('bag', JSON.stringify(state));
     },
+    cleanBag: (state, action) => {
+      state.length = 0;
+      localStorage.removeItem('bag');
+    },
   },
 });
 
 const { reducer, actions } = bag;
-export const { addToBag, removeProduct } = actions;
+export const { addToBag, removeProduct, cleanBag } = actions;
 export default reducer;

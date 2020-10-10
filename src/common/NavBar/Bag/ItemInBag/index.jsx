@@ -12,7 +12,7 @@ const ItemInBag = ({ product }) => {
       ></div>
       <div className="details">
         <div className="name">{product.name}</div>
-        <div className="price">${product.price}.99 USD</div>
+        <div className="price">${product.price}.90 USD</div>
         <div className="quantity">x{product.quantity}</div>
       </div>
     </div>
