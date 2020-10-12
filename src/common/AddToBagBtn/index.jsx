@@ -2,9 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 
-import { addToBag } from 'redux/reducers/bagSlice';
-
 import './AddToBagBtn.scss';
+import { addToBag } from 'redux/reducers/bagSlice';
 
 const AddToBagBtn = ({ product }) => {
   const dispatch = useDispatch();

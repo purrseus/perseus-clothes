@@ -13,15 +13,14 @@ const Category = () => {
   const categoriesState = useSelector(state => state.categories);
 
   useEffect(() => {
-    const fetchCategories = async () => {
+    (async () => {
       try {
         const categories = await productApi.categories();
         dispatch(getCategories(categories));
       } catch (error) {
         throw error;
       }
-    };
-    fetchCategories();
+    })();
   }, [dispatch]);
 
   return (

@@ -10,6 +10,7 @@ const ItemInBag = ({ product }) => {
         className="image"
         style={{ backgroundImage: `url(${product.image})` }}
       ></div>
+
       <div className="details">
         <div className="name">{product.name}</div>
         <div className="price">${product.price}.90 USD</div>

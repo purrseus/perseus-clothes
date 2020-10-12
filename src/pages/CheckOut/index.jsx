@@ -15,16 +15,25 @@ toast.configure();
 const CheckOut = () => {
   const dispatch = useDispatch();
   const bagState = useSelector(state => state.bag);
+  const { user } = useSelector(state => state.auth);
+
   const totalPrice = bagState.reduce((acc, cur) => {
     return acc + cur.quantity * (cur.price + 0.9);
   }, 0);
 
-  const handleToken = (token) => {
+  const handleToken = token => {
     if (token) {
-      toast("Success! Check your email for details", { type: "success" });
+      toast('Success! Check your email for details', { type: 'success' });
       dispatch(cleanBag());
     }
   };
+
+  const onCheckUser = () => {
+    if(!user) {
+      toast('Create an account or log in to continue', { type: 'error' });
+    }
+    return;
+  }
 
   return (
     <div className="check-out">
@@ -45,20 +54,22 @@ const CheckOut = () => {
             <span>${totalPrice.toFixed(2)}</span>
           </div>
 
-          <div className="check-out-btn">
+          <div onClick={onCheckUser} className="check-out-btn">
             <span>Pay now!</span>
-            <StripeCheckout
-              className="hide"
-              image={Logo}
-              name="Perseus Clothes Ltd."
-              panelLabel='Pay Now'
-              description={`Your total is $${totalPrice.toFixed(2)}`}
-              stripeKey={process.env.REACT_APP_STRIPE_KEY}
-              token={handleToken}
-              billingAddress
-              shippingAddress
-              amount={totalPrice.toFixed(2) * 100}
+            {!!user && (
+              <StripeCheckout
+                className="hide"
+                image={Logo}
+                name="Perseus Clothes Ltd."
+                panelLabel="Pay Now"
+                description={`Your total is $${totalPrice.toFixed(2)}`}
+                stripeKey={process.env.REACT_APP_STRIPE_KEY}
+                token={handleToken}
+                billingAddress
+                shippingAddress
+                amount={totalPrice.toFixed(2) * 100}
               />
+            )}
           </div>
         </>
       )}

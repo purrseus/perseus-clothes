@@ -64,3 +64,22 @@ $color-transition: color 0.3s ease-in-out;
   height: 25px;
   margin-bottom: -6px;
 }
+
+@mixin input-auth {
+  border: 1px solid $gray;
+  padding: 15px;
+  margin: 15px 0px 5px;
+  width: 400px;
+}
+
+@mixin submit {
+  text-transform: uppercase;
+  padding: 10px 40px;
+  border: $border;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $black;
+    color: white;
+  }
+}

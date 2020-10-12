@@ -2,25 +2,47 @@
 @import 'assets/styles/common.scss';
 @import 'assets/styles/font.scss';
 
+%sign-in-sign-out {
+  font-family: futura-pt, sans-serif;
+  font-size: 12px;
+  color: $gray;
+  transition: $transition;
+
+  &:hover {
+    color: $black;
+  }
+}
+
+
 .top-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  background-color: #ddd;
+  
+  .user-name {
+    position: absolute;
+    left: 0;
+    padding: 0px 10px;
+  }
+  
   ul {
     display: flex;
     justify-content: flex-end;
-    background-color: #ddd;
 
     li {
       padding: 6px 16px;
       border-left: 1px solid #ccc;
 
-      a {
-        font-family: futura-pt, sans-serif;
-        font-size: 12px;
-        color: $gray;
-        transition: $transition;
+      div {
+        display: inline;
+        cursor: pointer;  
+        @extend %sign-in-sign-out;
+      }
 
-        &:hover {
-          color: $black;
-        }
+      a {
+        @extend %sign-in-sign-out;
       }
     }
   }

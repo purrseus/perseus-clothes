@@ -2,14 +2,15 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const auth = createSlice({
   name: 'auth',
-  initialState: null,
+  initialState: {},
   reducers: {
-    hasSignIn: (state, action) => {
-      state = !!action.payload;
+    googleAuth: (state, action) => {
+      const { user } = action.payload;
+      state.user = user;
     },
-  },
+  }
 });
 
 const { reducer, actions } = auth;
-export const { hasSignIn } = actions;
+export const { googleAuth } = actions;
 export default reducer;

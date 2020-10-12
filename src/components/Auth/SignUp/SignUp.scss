@@ -1,0 +1,32 @@
+@import 'assets/styles/color.scss';
+@import 'assets/styles/common.scss';
+@import 'assets/styles/font.scss';
+
+.sign-up {
+
+  h1, div {
+    text-align: left;
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    input[type="text"],
+    input[type="password"] {
+      @include input-auth;
+    }
+
+    p {
+      color: rgb(255, 0, 0);
+    }
+
+    input[type="submit"] {
+      margin: 20px 0px;
+      @include submit;
+    }
+  }
+
+}

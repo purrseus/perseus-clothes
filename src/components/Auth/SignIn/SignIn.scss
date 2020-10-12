@@ -1,0 +1,58 @@
+@import 'assets/styles/color.scss';
+@import 'assets/styles/common.scss';
+@import 'assets/styles/font.scss';
+
+.sign-in {
+
+  h1, div {
+    text-align: left;
+    margin: 2px 0px;
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+
+    input[type="text"],
+    input[type="password"] {
+      @include input-auth;
+    }
+
+    p {
+      color: rgb(255, 0, 0);
+    }
+
+    .submit {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0px;
+
+      a {
+        display: inline;
+        font-size: 15px;
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+  
+      input[type="submit"] {
+        @include submit;
+      }
+    }
+
+    .firebaseui-card-content {
+      width: 400px;
+      padding: 0;
+      
+      ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}

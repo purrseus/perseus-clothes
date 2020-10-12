@@ -7,6 +7,7 @@ import { addToBag, removeProduct } from 'redux/reducers/bagSlice';
 
 const CheckOutItem = ({ item }) => {
   const dispatch = useDispatch();
+
   return (
     <div className="check-out-item">
       <div

@@ -17,6 +17,7 @@ const CollectionPreview = ({ category }) => {
           View all
         </Link>
       </div>
+
       <div className="products-preview">
         {!!productsPreview.length &&
           productsPreview.map((product, index) => (
