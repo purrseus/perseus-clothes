@@ -10,8 +10,6 @@ import Logo from 'assets/icons/logo.svg';
 import { cleanBag } from 'redux/reducers/bagSlice';
 import CheckOutItem from 'common/CommonItem';
 
-toast.configure();
-
 const CheckOut = () => {
   const dispatch = useDispatch();
   const bagState = useSelector(state => state.bag);

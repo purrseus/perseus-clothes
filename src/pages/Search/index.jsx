@@ -13,15 +13,14 @@ const Search = () => {
   const [result, setResult] = useState([]);
 
   useEffect(() => {
-    const fetchProductMatch = async () => {
+    (async () => {
       try {
         const products = await productApi.search(name);
         !!products.length ? setResult(products) : setResult(name);
       } catch (error) {
         throw error;
       }
-    };
-    fetchProductMatch();
+    })();
   }, [name]);
 
   return (

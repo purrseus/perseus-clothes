@@ -13,7 +13,6 @@ import NotFound from 'pages/NotFound';
 const ProductsDetails = () => {
   const categories = ['hats', 'jackets', 'sneakers', 'men', 'women'];
   const { category } = useParams();
-  console.log(categories.indexOf(category));
 
   const dispatch = useDispatch();
   const categoryState = useSelector(state => state.category);
@@ -22,15 +21,14 @@ const ProductsDetails = () => {
   );
 
   useEffect(() => {
-    const fetchCategory = async () => {
+    (async () => {
       try {
         const categoryData = await productApi.getAll();
         dispatch(getCategory(categoryData));
       } catch (error) {
         throw error;
       }
-    };
-    fetchCategory();
+    })();
     window.scrollTo(0, 0);
   }, [category, dispatch]);
 
