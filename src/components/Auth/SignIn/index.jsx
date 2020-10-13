@@ -19,7 +19,12 @@ const SignIn = () => {
       <div>with your email and password</div>
 
       <form onSubmit={handleSubmit(onSubmit)}>
-        <input type="text" name="email" placeholder="Email" ref={register({ required: true })} />
+        <input
+          type="text"
+          name="email"
+          placeholder="Email"
+          ref={register({ required: true })}
+        />
         {errors.email && <p>Email is required!</p>}
 
         <input
@@ -35,7 +40,10 @@ const SignIn = () => {
           <input type="submit" value="Sign In" />
         </div>
 
-        <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()}/>
+        <StyledFirebaseAuth
+          uiConfig={uiConfig}
+          firebaseAuth={firebase.auth()}
+        />
       </form>
     </div>
   );

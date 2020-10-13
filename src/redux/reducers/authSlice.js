@@ -8,7 +8,7 @@ const auth = createSlice({
       const { user } = action.payload;
       state.user = user;
     },
-  }
+  },
 });
 
 const { reducer, actions } = auth;

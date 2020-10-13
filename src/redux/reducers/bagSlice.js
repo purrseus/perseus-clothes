@@ -27,7 +27,7 @@ const bag = createSlice({
         : state.splice(state.indexOf(checkProduct), 1);
       localStorage.setItem('bag', JSON.stringify(state));
     },
-    cleanBag: (state, action) => {
+    cleanBag: state => {
       state.length = 0;
       localStorage.removeItem('bag');
     },

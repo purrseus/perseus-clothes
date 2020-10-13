@@ -27,11 +27,11 @@ const CheckOut = () => {
   };
 
   const onCheckUser = () => {
-    if(!user) {
+    if (!user) {
       toast('Create an account or log in to continue', { type: 'error' });
     }
     return;
-  }
+  };
 
   return (
     <div className="check-out">

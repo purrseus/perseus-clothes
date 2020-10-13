@@ -13,20 +13,19 @@
   }
 }
 
-
 .top-bar {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   position: relative;
   background-color: #ddd;
-  
+
   .user-name {
     position: absolute;
     left: 0;
     padding: 0px 10px;
   }
-  
+
   ul {
     display: flex;
     justify-content: flex-end;
@@ -37,7 +36,7 @@
 
       div {
         display: inline;
-        cursor: pointer;  
+        cursor: pointer;
         @extend %sign-in-sign-out;
       }
 

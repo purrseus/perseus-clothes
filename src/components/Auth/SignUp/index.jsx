@@ -16,10 +16,20 @@ const SignUp = () => {
       <div>with your email and password</div>
 
       <form onSubmit={handleSubmit(onSubmit)}>
-      <input type="text" name="displayName" placeholder="Display Name" ref={register({ required: true })} />
+        <input
+          type="text"
+          name="displayName"
+          placeholder="Display Name"
+          ref={register({ required: true })}
+        />
         {errors.displayName && <p>Display name is required!</p>}
 
-        <input type="text" name="email" placeholder="Email" ref={register({ required: true })} />
+        <input
+          type="text"
+          name="email"
+          placeholder="Email"
+          ref={register({ required: true })}
+        />
         {errors.email && <p>Email is required!</p>}
 
         <input
