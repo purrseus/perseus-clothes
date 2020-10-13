@@ -27,10 +27,9 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const unregisterAuthObserver = firebase.auth().onAuthStateChanged(
-      (user) => {
-        if (!!user) dispatch(googleAuth({ user: user.displayName }))
-      });
+    const unregisterAuthObserver = firebase.auth().onAuthStateChanged(user => {
+      if (!!user) dispatch(googleAuth({ user: user.displayName }));
+    });
 
     return () => unregisterAuthObserver();
   }, [dispatch]);

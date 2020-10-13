@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import firebase from 'firebase';
 import { useSelector, useDispatch } from 'react-redux';
 import { googleAuth } from 'redux/reducers/authSlice';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import './TopBar.scss';
 
@@ -13,6 +15,8 @@ const TopBar = () => {
   const onSignOut = () => {
     firebase.auth().signOut();
     dispatch(googleAuth({ user: false }));
+    localStorage.removeItem('logged');
+    toast('Logout successful!', { type: 'success' });
   };
 
   return (
@@ -33,6 +37,7 @@ const TopBar = () => {
           )}
         </li>
       </ul>
+      <ToastContainer />
     </div>
   );
 };

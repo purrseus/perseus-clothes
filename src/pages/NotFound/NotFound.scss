@@ -1,0 +1,21 @@
+@import 'assets/styles/common.scss';
+@import 'assets/styles/font.scss';
+@import 'assets/styles/color.scss';
+
+.not-found {
+  min-height: 80vh;
+  @include flex-center;
+  flex-direction: column;
+
+  :first-child {
+    font-size: 100px;
+  }
+
+  .text {
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    @include main-btn;
+  }
+}
